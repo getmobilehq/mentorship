@@ -39,18 +39,18 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-4 md:gap-8">
           <Link href="/" className="font-bold text-xl flex items-center">
             MentorMatch
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-4 lg:gap-6">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-foreground px-1"
               >
                 {item.label}
               </Link>
